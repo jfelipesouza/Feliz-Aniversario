@@ -1,6 +1,16 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import React from 'react'
+import { AppProps } from 'next/app'
+import { GlobalStyles } from '@/styles/global'
+import { ThemeProvider } from 'styled-components'
+import { ligthTheme } from '@/styles/themes'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+  return (
+    <ThemeProvider theme={ligthTheme}>
+      <GlobalStyles />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
+
+export default MyApp
