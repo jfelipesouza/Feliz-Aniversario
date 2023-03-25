@@ -33,23 +33,46 @@ export const Title = styled.h2`
     #780000,
     #000
   );
+  @media screen and (min-width: 1600px) {
+    font-size: 3.5rem;
+  }
+  @media screen and (min-width: 2000px) {
+    font-size: 5.5rem;
+  }
 `
 export const Description = styled.p`
   font-size: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
   font-weight: bold;
   text-align: left;
   font-family: 'Inter', sans-serif;
   color: ${({ theme }) => theme.colors.black};
+
+  @media screen and (min-width: 1600px) {
+    font-size: 2.5rem;
+    margin: 3rem 0;
+  }
+  @media screen and (min-width: 2000px) {
+    font-size: 3.5rem;
+    margin: 4rem 0;
+  }
 `
 export const Button = styled.a`
   display: flex;
   padding: 1rem 4rem;
   font-size: 1.4rem;
   color: white;
+  font-weight: bolder;
   background-color: ${({ theme }) => theme.colors.primary};
-  margin-top: 2rem;
   border-radius: 0.4rem;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+
+  @media screen and (min-width: 1600px) {
+    font-size: 1.8rem;
+  }
+  @media screen and (min-width: 2000px) {
+    font-size: 2.5rem;
+  }
 `
