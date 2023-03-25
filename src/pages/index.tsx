@@ -1,12 +1,28 @@
 import React from 'react'
 
-import { Container } from '@/styles/pages/home'
+import {
+  Button,
+  Container,
+  Description,
+  SideContainer,
+  Title
+} from '@/styles/pages/home'
 import BirthdayCard from '@/components/BirthdayCard'
 
 const Home: React.FC = () => {
   return (
     <Container>
-      <BirthdayCard />
+      <SideContainer>
+        <Title>Parabéns para você!!!</Title>
+        <Description>
+          Em comemoração ao seu grande dia desenvolvi um pequeno jogo para que
+          se divirta um pouco.
+        </Description>
+        <Button href="/game">Jogue agora</Button>
+      </SideContainer>
+      <SideContainer>
+        <BirthdayCard />
+      </SideContainer>
     </Container>
   )
 }

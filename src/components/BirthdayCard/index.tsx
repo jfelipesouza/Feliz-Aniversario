@@ -1,30 +1,48 @@
 import React, { useState } from 'react'
 import {
-  BackOutsideCard,
   Container,
-  FrontOutsideCard,
   InsideCard,
-  OutsideCard
+  InsideCardTitle,
+  OutsideCard,
+  OutsideCardContent,
+  OutsideCardTitle
 } from './styled'
 
 type BirthdayCardProps = {}
 
 const BirthdayCard: React.FC<BirthdayCardProps> = () => {
   const [flip, setFlip] = useState<Boolean>(false)
+  const [flipText, setFlipText] = useState(false)
+
+  const mouseEntry = () => {
+    setFlip(true)
+    setFlipText(true)
+  }
+  const mouseOut = () => {
+    setFlip(false)
+    setFlipText(false)
+  }
 
   return (
-    <Container
-      onMouseOver={() => setFlip(true)}
-      onMouseOut={() => setFlip(false)}
-    >
+    <Container onMouseOver={mouseEntry} onMouseOut={mouseOut}>
       <OutsideCard flip={flip}>
-        <FrontOutsideCard>Feliz aniversario</FrontOutsideCard>
-        <BackOutsideCard>Feliz aniversario</BackOutsideCard>
+        <OutsideCardContent>
+          <OutsideCardTitle flip={flipText}>
+            Feliz aniversário!!
+          </OutsideCardTitle>
+          <img src="desenho.svg" alt="desenho" className="image" />
+        </OutsideCardContent>
       </OutsideCard>
       <InsideCard>
-        <p>Wishing you a very happy birthday filled with love and laughter</p>
+        <InsideCardTitle>Feliz aniversário!!</InsideCardTitle>
+        <p>Minha amada,</p>
+        <p>
+          Te desejo um excelente aniversário e que seu dia seja tão fantástico
+          quanto você. Você é um brilhante raio de sol em minha vida, espero que
+          aproveite muito seu dia especial,corra como o vento em seu evento e
+          que hoje seja memorável para você.
+        </p>
       </InsideCard>
-      Final
     </Container>
   )
 }

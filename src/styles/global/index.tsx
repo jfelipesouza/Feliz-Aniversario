@@ -12,9 +12,10 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-size: ${({ theme }) => theme.fontSize.sm};
     font-family: ${({ theme }) => theme.fontFamily.lato},sans-serif;
+    user-select: none;
   }
   body{
-    background-color: ${({ theme }) => theme.colors.secundary};
+    background-color: ${({ theme }) => theme.colors.background};
     overflow-x: hidden; 
     scrollbar-width: auto;
     scrollbar-color:${({ theme }) => theme.colors.primary} ${({ theme }) =>
