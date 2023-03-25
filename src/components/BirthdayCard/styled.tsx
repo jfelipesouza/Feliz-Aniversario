@@ -15,7 +15,7 @@ const levitationAndPulse = keyframes`
 export const Container = styled.div`
   width: 30vw;
   height: calc(50vw - 25vh);
-  min-height: calc(35vw);
+  min-height: calc(35vw + 5vh);
   max-height: calc(40vw);
   min-width: 300px;
   max-width: 1000px;
@@ -119,14 +119,14 @@ export const InsideCard = styled.div<OutsideCardProps>`
     font-family: 'Brush Script MT', cursive;
     margin: 0.5rem 2rem;
     color: ${({ theme }) => theme.colors.hueBlack};
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: bold;
     text-align: justify;
     visibility: ${({ flip }) => (flip ? 'visibility' : 'hidden')};
   }
   @media screen and (min-width: 1800px) {
     p {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
 `
