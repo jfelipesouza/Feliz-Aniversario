@@ -18,7 +18,13 @@ const Home: React.FC = () => {
           Em comemoração ao seu grande dia desenvolvi um pequeno jogo para que
           se divirta um pouco.
         </Description>
-        <Button href="/game">Jogue agora</Button>
+        <Button
+          href="https://jogo-da-memoria-feliz-aniversario.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Jogue agora
+        </Button>
       </SideContainer>
       <SideContainer>
         <BirthdayCard />
