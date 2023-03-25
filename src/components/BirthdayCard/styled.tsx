@@ -102,7 +102,7 @@ export const OutsideCardTitle = styled.h2<OutsideCardProps>`
     font-size: 2.5rem;
   }
 `
-export const InsideCard = styled.div`
+export const InsideCard = styled.div<OutsideCardProps>`
   position: absolute;
   background-image: linear-gradient(
     to left,
@@ -122,6 +122,7 @@ export const InsideCard = styled.div`
     font-size: 1.7rem;
     font-weight: bold;
     text-align: justify;
+    visibility: ${({ flip }) => (flip ? 'visibility' : 'hidden')};
   }
   @media screen and (min-width: 1800px) {
     p {

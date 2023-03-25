@@ -33,7 +33,7 @@ const BirthdayCard: React.FC<BirthdayCardProps> = () => {
           <img src="desenho.svg" alt="desenho" className="image" />
         </OutsideCardContent>
       </OutsideCard>
-      <InsideCard>
+      <InsideCard flip={flip}>
         <InsideCardTitle>Feliz aniversário!!</InsideCardTitle>
         <p>Minha amada,</p>
         <p>
